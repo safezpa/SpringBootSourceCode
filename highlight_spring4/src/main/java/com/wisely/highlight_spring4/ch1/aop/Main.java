@@ -12,9 +12,9 @@ public class Main {
 		 DemoMethodService demoMethodService = context.getBean(DemoMethodService.class);
 		 
 		 demoAnnotationService.add();
-		 
-		 demoMethodService.add();
-		 
+		 demoAnnotationService.acc();
+		 demoMethodService.add(1,2);
+		 demoMethodService.acc(3);
 		 context.close();
 	}
 

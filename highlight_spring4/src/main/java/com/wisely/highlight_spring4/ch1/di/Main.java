@@ -4,13 +4,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
 	public static void main(String[] args) {
-		 AnnotationConfigApplicationContext context =
-	                new AnnotationConfigApplicationContext(DiConfig.class); //1
-		 
-		 UseFunctionService useFunctionService = context.getBean(UseFunctionService.class); //2
-		 
-		 System.out.println(useFunctionService.SayHello("world"));
-		 
-		 context.close();
+		AnnotationConfigApplicationContext annotationConfigApplicationContext
+				= new AnnotationConfigApplicationContext(DiConfig.class);
+		UseFunctionService useFunctionService
+				= annotationConfigApplicationContext.getBean(UseFunctionService.class);
+		System.out.println(useFunctionService.sayHello("Alice"));
+		annotationConfigApplicationContext.close();
 	}
 }

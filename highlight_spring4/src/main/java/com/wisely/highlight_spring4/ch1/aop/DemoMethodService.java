@@ -4,5 +4,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DemoMethodService {
-	public void add(){}
+	public int add(int a ,int b){
+
+		return a+b;
+	}
+	public int acc(int i){
+
+		return i++;
+	}
 }

@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @Configuration
 @ComponentScan("com.wisely.highlight_spring4.ch3.taskscheduler")
-@EnableScheduling //1
+@EnableScheduling //1 直接导入配置类
 public class TaskSchedulerConfig {
 
 }
